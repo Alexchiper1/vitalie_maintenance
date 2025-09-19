@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vital Maintenance</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <div class="nav-logo">
+      <img src="images/logo.png" alt="Vital Maintenance Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Our Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+  <section id="home" class="hero">
+  <div class="slider">
+    <div class="slides">
+      <img src="images/pic2.png" alt="Maintenance 1" class="slide active">
+      <img src="images/pic1.png" alt="Maintenance 2" class="slide">
+      <img src="images/pic3.png" alt="Maintenance 3" class="slide">
+      <img src="images/pic4.png" alt="Maintenance 4" class="slide">
+      <img src="images/pic5.png" alt="Maintenance 5" class="slide">
+    </div>
+    <div class="hero-text">
+      <h2>Reliable Maintenance Solutions for Every Home & Business</h2>
+      <a href="#contact" class="cta-btn">Get a Quote</a>
+    </div>
+  </div>
+</section>
+
+
+  <section id="services" class="container">
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="card hidden left"><h3>Plumbing</h3><p>Professional plumbing repairs and installations.</p></div>
+      <div class="card hidden right"><h3>Electrical</h3><p>Safe electrical wiring and maintenance.</p></div>
+      <div class="card hidden left"><h3>Painting</h3><p>Interior and exterior painting with top quality.</p></div>
+      <div class="card hidden right"><h3>Flooring</h3><p>Durable flooring installations and repairs.</p></div>
+    </div>
+  </section>
+
+  <section id="ourwork" class="container">
+    <h2>Our Work</h2>
+    <div class="grid">
+      <div class="card hidden up"><img src="images/work1.jpg" alt="Project 1"><p>Kitchen renovation</p></div>
+      <div class="card hidden up"><img src="images/work2.jpg" alt="Project 2"><p>Office wiring</p></div>
+      <div class="card hidden up"><img src="images/work3.jpg" alt="Project 3"><p>Bathroom upgrade</p></div>
+    </div>
+  </section>
+
+  <section id="about" class="container about-section">
+  <h2>About Us</h2>
+  <div class="about-grid">
+    <!-- Text Column -->
+    <div class="about-text hidden left">
+      <p>
+        At <strong>Vital Maintenance</strong>, we take pride in offering reliable, affordable, 
+        and high-quality maintenance services. With years of experience, our team ensures 
+        every project is completed with care and professionalism.
+      </p>
+      <p>
+        We've been in business for <strong>15 years</strong>, helping homes and businesses 
+        stay safe, functional, and beautiful.
+      </p>
+    </div>
+    
+    <!-- Graphic / Image Column -->
+    <div class="about-image hidden right">
+      <div class="years-circle">
+        <span>15</span>
+        <p>Years of Experience</p>
+      </div>
+      <!-- Optional: Add an image behind the circle -->
+      <img src="images/about-placeholder.jpg" alt="Team at work" class="about-photo">
+    </div>
+  </div>
+</section>
+
+
+  <section id="contact" class="container">
+    <h2>Contact Us</h2>
+    <form id="contactForm" class="hidden up">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="formMsg" class="success-msg"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Vital Maintenance. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

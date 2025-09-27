@@ -8,63 +8,139 @@
 </head>
 <body>
 
+<!-- Header / Navigation -->
 <header>
   <nav class="navbar">
-    <div class="nav-logo">
-      <img src="images/logo.png" alt="Vital Maintenance Logo">
+    <div class="nav-logo slide-up">
+      <a href="index.html"><img src="images/logo.png" alt="Vital Maintenance"></a>
     </div>
+
     <ul class="nav-links">
-      <li><a href="index.html#home">Home</a></li>
-      <li><a href="index.html#about">About Us</a></li>
-      <li><a href="index.html#services">Services</a></li>
-      <li><a href="#work">Our Work</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
+      <li class="slide-up"><a href="index.html">Home</a></li>
+      <li class="slide-up"><a href="ourwork.html">Our Work</a></li>
+      <li class="slide-up"><a href="contact.html">Contact</a></li>
     </ul>
+
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   </nav>
 </header>
 
-<section id="kitchen" class="project-section container">
-  <h2>Kitchen Renovations</h2>
-  <div class="project-grid">
-    <div class="project-card"><img src="images/work-kitchen1.jpg" alt="Kitchen Project 1"><p>Modern kitchen renovation with open shelving.</p></div>
-    <div class="project-card"><img src="images/work-kitchen2.jpg" alt="Kitchen Project 2"><p>Classic kitchen makeover with island.</p></div>
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <img src="images/pic5.png" alt="Maintenance Hero" class="hero-image">
+  <div class="hero-text">
+    <h2 class="slide-up">Reliable Maintenance Solutions for Every Home & Business</h2>
+    <a href="contact.html" class="cta-btn slide-up">Get a Quote</a>
   </div>
 </section>
 
-<section id="bathroom" class="project-section container">
-  <h2>Bathroom Renovations</h2>
-  <div class="project-grid">
-    <div class="project-card"><img src="images/work-bathroom1.jpg" alt="Bathroom Project 1"><p>Luxury bathroom with modern fixtures.</p></div>
+<!-- Projects Section -->
+<section id="ourwork" class="container">
+  <h2 class="section-title">Our Work</h2>
+  <p class="section-subtitle">Click a project to view images. Get a quote for your project today!</p>
+
+  <div class="projects-grid">
+    <!-- Kitchen -->
+    <div class="project-card" onclick="openLightbox('kitchen')">
+      <img src="images/Kitchen/IMG_2281.png" alt="Kitchen Renovation">
+      <h3>Kitchen Renovations</h3>
+      <p>Modern kitchen designs</p>
+      <a href="contact.html" class="cta-btn small-btn" onclick="event.stopPropagation()">Get Quote</a>
+    </div>
+
+    <!-- Bathroom -->
+    <div class="project-card" onclick="openLightbox('bathroom')">
+      <img src="images/Bathroom/Bathroom.png" alt="Bathroom Renovation">
+      <h3>Bathroom Renovations</h3>
+      <p>Luxury bathrooms with modern fixtures.</p>
+      <a href="contact.html" class="cta-btn small-btn" onclick="event.stopPropagation()">Get Quote</a>
+    </div>
+
+    <!-- Painting -->
+    <div class="project-card" onclick="openLightbox('painting')">
+      <img src="images/Painting/Painting.png" alt="Painting Work">
+      <h3>Painting & Decorating</h3>
+      <p>Interior & exterior painting services.</p>
+      <a href="contact.html" class="cta-btn small-btn" onclick="event.stopPropagation()">Get Quote</a>
+    </div>
+
+    <!-- Flooring -->
+    <div class="project-card" onclick="openLightbox('flooring')">
+      <img src="images/Flooring/Flooring.png" alt="Flooring Work">
+      <h3>Flooring</h3>
+      <p>Joinery, Woodwork and Florring.</p>
+      <a href="contact.html" class="cta-btn small-btn" onclick="event.stopPropagation()">Get Quote</a>
+    </div>
+
+    <!-- Tiling -->
+    <div class="project-card" onclick="openLightbox('tiling')">
+      <img src="images/tiling/Tiling.png" alt="Tiling Work">
+      <h3>Tiling</h3>
+      <p>Outside & Inside Tiling</p>
+      <a href="contact.html" class="cta-btn small-btn" onclick="event.stopPropagation()">Get Quote</a>
+    </div>
+
+    <!-- Extensions -->
+    <div class="project-card" onclick="openLightbox('extensions')">
+      <img src="images/Conversions & Extensions/Conversion.png" alt="Extensions Work">
+      <h3>Extensions & Conversions</h3>
+      <p>Extensions, Attics & Sheds</p>
+      <a href="contact.html" class="cta-btn small-btn" onclick="event.stopPropagation()">Get Quote</a>
+    </div>
+
+    
   </div>
 </section>
 
-<section id="plumbing" class="project-section container">
-  <h2>Plumbing Work</h2>
-  <div class="project-grid">
-    <div class="project-card"><img src="images/work-plumbing1.jpg" alt="Plumbing Project 1"><p>Pipe replacements and maintenance work.</p></div>
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img id="lightbox-img" src="" alt="">
+  <div class="caption"></div>
+  <div class="arrow left" onclick="prevImage()">&#10094;</div>
+  <div class="arrow right" onclick="nextImage()">&#10095;</div>
+</div>
+
+<!-- Contact Section -->
+<!-- Contact Section -->
+<section id="contact" class="container">
+  <h2 class="section-title">Contact Us</h2>
+  <p class="section-subtitle">Get in touch to discuss your project or request a quote.</p>
+
+  <div class="form-wrapper">
+    <form id="contactForm" class="hidden up">
+      <!-- Personal Info -->
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+
+      <!-- Services Selection -->
+      <div class="services">
+        <p>Select the services you need:</p>
+        <label><input type="checkbox" name="services" value="kitchen"> Kitchen Renovation</label>
+        <label><input type="checkbox" name="services" value="bathroom"> Bathroom Renovation</label>
+        <label><input type="checkbox" name="services" value="painting"> Painting & Decorating</label>
+        <label><input type="checkbox" name="services" value="tiling"> Tiling</label>
+        <label><input type="checkbox" name="services" value="flooring"> Flooring</label>
+        <label><input type="checkbox" name="services" value="extensions"> Extensions & Conversions</label>
+        <label><input type="checkbox" name="services" value="plumbing"> Plumbing</label>
+      </div>
+
+      <!-- Optional Project Details -->
+      <textarea id="message" placeholder="Project Details / Additional Info" rows="5"></textarea>
+
+      <!-- Submit -->
+      <button type="submit">Get a Quote</button>
+    </form>
   </div>
+
+  <p id="formMsg" class="success-msg"></p>
 </section>
 
-<section id="painting" class="project-section container">
-  <h2>Painting</h2>
-  <div class="project-grid">
-    <div class="project-card"><img src="images/work-painting1.jpg" alt="Painting Project 1"><p>Interior & exterior painting services.</p></div>
-  </div>
-</section>
-
-<section id="extensions" class="project-section container">
-  <h2>Extensions & Attics</h2>
-  <div class="project-grid">
-    <div class="project-card"><img src="images/work-extension1.jpg" alt="Extension Project 1"><p>Home extensions and attic conversions.</p></div>
-  </div>
-</section>
-
-<section id="woodwork" class="project-section container">
-  <h2>Woodwork</h2>
-  <div class="project-grid">
-    <div class="project-card"><img src="images/work-woodwork1.jpg" alt="Woodwork Project 1"><p>Custom woodwork and renovations.</p></div>
-  </div>
-</section>
 
 <footer>
   <p>&copy; 2025 Vital Maintenance. All rights reserved.</p>

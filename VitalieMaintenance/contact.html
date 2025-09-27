@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vital Maintenance</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+   <header>
+      <nav class="navbar">
+          <div class="nav-logo slide-up">
+            <a href="index.html">
+              <img src="images/logo.png" alt="Vital Maintenance">
+            </a>
+          </div>
+
+
+          <!-- Navigation Links -->
+          <ul class="nav-links">
+            <li class="slide-up"><a href="index.html">Home</a></li>
+            <li class="slide-up"><a href="ourwork.html">Our Work</a></li>
+            <li class="slide-up"><a href="contact.html">Contact</a></li>
+          </ul>
+
+          <!-- Hamburger Icon -->
+          <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+      </nav>
+    </header>
+
+<!-- Contact Section -->
+<section id="contact" class="container">
+  <h2 class="section-title">Contact Us</h2>
+  <p class="section-subtitle">Get in touch to discuss your project or request a quote.</p>
+
+  <div class="form-wrapper">
+    <form id="contactForm" class="hidden up">
+      <!-- Personal Info -->
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+
+      <!-- Services Selection -->
+      <div class="services">
+        <p>Select the services you need:</p>
+        <label><input type="checkbox" name="services" value="kitchen"> Kitchen Renovation</label>
+        <label><input type="checkbox" name="services" value="bathroom"> Bathroom Renovation</label>
+        <label><input type="checkbox" name="services" value="painting"> Painting & Decorating</label>
+        <label><input type="checkbox" name="services" value="tiling"> Tiling</label>
+        <label><input type="checkbox" name="services" value="flooring"> Flooring</label>
+        <label><input type="checkbox" name="services" value="extensions"> Extensions & Conversions</label>
+        <label><input type="checkbox" name="services" value="plumbing"> Plumbing</label>
+      </div>
+
+      <!-- Optional Project Details -->
+      <textarea id="message" placeholder="Project Details / Additional Info" rows="5"></textarea>
+
+      <!-- Submit -->
+      <button type="submit">Get a Quote</button>
+    </form>
+  </div>
+
+  <p id="formMsg" class="success-msg"></p>
+</section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Vital Maintenance. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

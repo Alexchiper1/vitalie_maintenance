@@ -8,18 +8,20 @@
 </head>
 <body>
   <!-- Header / Navigation -->
-  <header>
-    <nav class="navbar">
-        <div class="nav-logo">
-          <img src="images/logo.png" alt="Vital Maintenance">
+   <header>
+      <nav class="navbar">
+          <div class="nav-logo slide-up">
+            <a href="index.html">
+              <img src="images/logo.png" alt="Vital Maintenance">
+            </a>
           </div>
+
 
           <!-- Navigation Links -->
           <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Our Services</a></li>
-            <li><a href="ourwork.html">Our Work</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li class="slide-up"><a href="index.html">Home</a></li>
+            <li class="slide-up"><a href="ourwork.html">Our Work</a></li>
+            <li class="slide-up"><a href="contact.html">Contact</a></li>
           </ul>
 
           <!-- Hamburger Icon -->
@@ -27,71 +29,51 @@
             <div></div>
             <div></div>
             <div></div>
-        </div>
-    </nav>
-  </header>
+          </div>
+      </nav>
+    </header>
 
   <!-- Hero Section -->
   <section id="home" class="hero">
     <img src="images/pic2.png" alt="Maintenance Hero" class="hero-image">
     <div class="hero-text">
-      <h2>Reliable Maintenance Solutions for Every Home & Business</h2>
-      <a href="#contact" class="cta-btn">Get a Quote</a>
+      <h2 class="slide-up">Reliable Maintenance Solutions for Every Home & Business</h2>
+      <a href="contact.html" class="cta-btn slide-up">Get a Quote</a>
     </div>
+
   </section>
 
-  <!-- Services Section -->
-  <section id="services" class="container">
-    <h2 class="section-title">Our Services</h2>
-    <div class="services-grid">
-      <div class="service-card" onclick="location.href='ourwork.html#kitchens'">
-        <h3>Kitchens</h3>
-        <p>Expert kitchen renovations tailored to your home.</p>
-      </div>
 
-      <div class="service-card" onclick="location.href='ourwork.html#bathrooms'">
-        <h3>Bathrooms</h3>
-        <p>Modern and functional bathroom transformations.</p>
-      </div>
-
-      <div class="service-card" onclick="location.href='ourwork.html#plumbing'">
-        <h3>Plumbing</h3>
-        <p>Reliable plumbing services and repairs.</p>
-      </div>
-
-      <div class="service-card" onclick="location.href='ourwork.html#painting'">
-        <h3>Painting</h3>
-        <p>Interior and exterior painting with quality finishes.</p>
-      </div>
-
-      <div class="service-card" onclick="location.href='ourwork.html#extensions'">
-        <h3>Extensions</h3>
-        <p>Expand your home with stylish extensions.</p>
-      </div>
-
-      <div class="service-card" onclick="location.href='ourwork.html#renovations'">
-        <h3>Renovations</h3>
-        <p>Complete house renovations for a fresh look.</p>
-      </div>
-    </div>
-  </section>
 
   <!-- Our Work Section -->
   <section id="ourwork" class="container">
     <h2>Our Work</h2>
     <div class="grid">
       <div class="card hidden up">
-        <img src="images/work1.jpg" alt="Project 1">
-        <p>Kitchen renovation</p>
+        <h3> Kitchen Redesign</h3>
+        <img src="images/Kitchen/IMG_2281.png" alt="Kitchen Renovation">
       </div>
       <div class="card hidden up">
-        <img src="images/work2.jpg" alt="Project 2">
-        <p>Office wiring</p>
+        <h3> Bathroom Renovations</h3>
+        <img src="images//Bathroom/Bathroom.png" alt="Bathroom Renovations">
       </div>
       <div class="card hidden up">
-        <img src="images/work3.jpg" alt="Project 3">
-        <p>Bathroom upgrade</p>
+        <h3> Painting & Decorating </h3>
+        <img src="images//Painting/Painting.png" alt="Painting">
       </div>
+      <div class="card hidden up">
+        <h3>Wall & Floor Tiling</h3>
+        <img src="images/tiling/Tiling.png" alt="Tiling">
+      </div>
+      <div class="card hidden up">
+        <h3>Flooring</h3>
+        <img src="images/Flooring/Flooring.png" alt="Flooring">
+      </div>
+      <div class="card hidden up">
+        <h3>Extensions & Conversions</h3>
+        <img src="images//Conversions & Extensions/Conversion.png" alt="Extensions">
+      </div>
+
     </div>
   </section>
 
@@ -120,17 +102,41 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="container">
-    <h2>Contact Us</h2>
+<!-- Contact Section -->
+<section id="contact" class="container">
+  <h2 class="section-title">Contact Us</h2>
+  <p class="section-subtitle">Get in touch to discuss your project or request a quote.</p>
+
+  <div class="form-wrapper">
     <form id="contactForm" class="hidden up">
+      <!-- Personal Info -->
       <input type="text" id="name" placeholder="Your Name" required>
       <input type="email" id="email" placeholder="Your Email" required>
-      <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+
+      <!-- Services Selection -->
+      <div class="services">
+        <p>Select the services you need:</p>
+        <label><input type="checkbox" name="services" value="kitchen"> Kitchen Renovation</label>
+        <label><input type="checkbox" name="services" value="bathroom"> Bathroom Renovation</label>
+        <label><input type="checkbox" name="services" value="painting"> Painting & Decorating</label>
+        <label><input type="checkbox" name="services" value="tiling"> Tiling</label>
+        <label><input type="checkbox" name="services" value="flooring"> Flooring</label>
+        <label><input type="checkbox" name="services" value="extensions"> Extensions & Conversions</label>
+        <label><input type="checkbox" name="services" value="plumbing"> Plumbing</label>
+      </div>
+
+      <!-- Optional Project Details -->
+      <textarea id="message" placeholder="Project Details / Additional Info" rows="5"></textarea>
+
+      <!-- Submit -->
+      <button type="submit">Get a Quote</button>
     </form>
-    <p id="formMsg" class="success-msg"></p>
-  </section>
+  </div>
+
+  <p id="formMsg" class="success-msg"></p>
+</section>
+
 
   <!-- Footer -->
   <footer>

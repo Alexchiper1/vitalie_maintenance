@@ -179,9 +179,10 @@ body {
 /* Cards                  */
 /* ---------------------- */
 .card {
-    background: white;
+    background: rgb(255, 253, 253);
     padding: 1rem;
     border-radius: 8px;
+    border: 2px solid #004466;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     text-align: center;
     opacity: 0;

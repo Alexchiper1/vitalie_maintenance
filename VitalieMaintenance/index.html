@@ -1,148 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vital Maintenance</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vital Maintenance – Home</title>
+  <meta name="description" content="Reliable renovations and maintenance across Dublin: kitchens, bathrooms, painting, tiling, flooring, and extensions." />
+  <link rel="icon" href="images/logo.png" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- Header / Navigation -->
-   <header>
-      <nav class="navbar">
-          <div class="nav-logo slide-up">
-            <a href="index.html">
-              <img src="images/logo.png" alt="Vital Maintenance">
-            </a>
-          </div>
+  <!-- Header -->
+  <header class="navbar">
+    <a class="brand" href="index.html">
+      <img src="images/logo.png" alt="Vital Maintenance" />
+    </a>
 
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
 
-          <!-- Navigation Links -->
-          <ul class="nav-links">
-            <li class="slide-up"><a href="index.html">Home</a></li>
-            <li class="slide-up"><a href="ourwork.html">Our Work</a></li>
-            <li class="slide-up"><a href="contact.html">Contact</a></li>
-          </ul>
+    <nav>
+      <ul class="nav-links" id="nav">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="ourwork.html">Our Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-          <!-- Hamburger Icon -->
-          <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-      </nav>
+  <!-- Hero -->
+  <section class="hero">
+    <img class="hero-bg" src="images/pic2.png" alt="Renovation hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container reveal">
+      <h1>Renovations done right — on time, on budget.</h1>
+      <p>Kitchen & bathroom remodels, painting, tiling, flooring, and extensions across Dublin.</p>
+      <div class="cta">
+        <a href="contact.html" class="btn">Get a Free Quote</a>
+        <a href="ourwork.html" class="btn ghost">See Our Work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust strip -->
+  <section class="trust container">
+    <div class="trust-grid">
+      <div class="trust-item reveal"><strong>15+</strong><span>Years Experience</span></div>
+      <div class="trust-item reveal"><strong>250+</strong><span>Projects Delivered</span></div>
+      <div class="trust-item reveal"><strong>5★</strong><span>Client Rated</span></div>
+      <div class="trust-item reveal"><strong>100%</strong><span>Insured & Registered</span></div>
+    </div>
+  </section>
+
+  <!-- Our Work preview -->
+  <section class="section container">
+    <header class="section-head reveal">
+      <h2>What we do</h2>
+      <p>End-to-end renovations for homes and businesses.</p>
     </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <img src="images/pic2.png" alt="Maintenance Hero" class="hero-image">
-    <div class="hero-text">
-      <h2 class="slide-up">Reliable Maintenance Solutions for Every Home & Business</h2>
-      <a href="contact.html" class="cta-btn slide-up">Get a Quote</a>
-    </div>
+    <div class="cards">
+      <article class="card reveal">
+        <img loading="lazy" src="images/Kitchen/IMG_2281.png" alt="Kitchen Renovation" />
+        <h3>Kitchen Renovations</h3>
+        <p>Design, cabinetry, electrics and tiling for functional, beautiful kitchens.</p>
+      </article>
 
-  </section>
+      <article class="card reveal">
+        <img loading="lazy" src="images/Bathroom/Bathroom.png" alt="Bathroom Renovation" />
+        <h3>Bathroom Renovations</h3>
+        <p>Full refits: plumbing, waterproofing, tiling and premium finishes.</p>
+      </article>
 
-
-
-  <!-- Our Work Section -->
-  <section id="ourwork" class="container">
-    <h2>Our Work</h2>
-    <div class="grid">
-      <div class="card hidden up">
-        <h3> Kitchen Redesign</h3>
-        <img src="images/Kitchen/IMG_2281.png" alt="Kitchen Renovation">
-      </div>
-      <div class="card hidden up">
-        <h3> Bathroom Renovations</h3>
-        <img src="images//Bathroom/Bathroom.png" alt="Bathroom Renovations">
-      </div>
-      <div class="card hidden up">
-        <h3> Painting & Decorating </h3>
-        <img src="images//Painting/Painting.png" alt="Painting">
-      </div>
-      <div class="card hidden up">
-        <h3>Wall & Floor Tiling</h3>
-        <img src="images/tiling/Tiling.png" alt="Tiling">
-      </div>
-      <div class="card hidden up">
-        <h3>Flooring</h3>
-        <img src="images/Flooring/Flooring.png" alt="Flooring">
-      </div>
-      <div class="card hidden up">
-        <h3>Extensions & Conversions</h3>
-        <img src="images//Conversions & Extensions/Conversion.png" alt="Extensions">
-      </div>
-
+      <article class="card reveal">
+        <img loading="lazy" src="images/Painting/Painting.png" alt="Painting & Decorating" />
+        <h3>Painting & Decorating</h3>
+        <p>Interior & exterior painting with durable, clean finishes.</p>
+      </article>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="container about-section">
-    <h2>About Us</h2>
+  <!-- About -->
+  <section class="about section container">
     <div class="about-grid">
-      <div class="about-text hidden left">
-        <p>
-          At <strong>Vital Maintenance</strong>, we take pride in offering reliable, affordable, 
-          and high-quality maintenance services. With years of experience, our team ensures 
-          every project is completed with care and professionalism.
-        </p>
-        <p>
-          We've been in business for <strong>15 years</strong>, helping homes and businesses 
-          stay safe, functional, and beautiful.
-        </p>
+      <div class="about-media reveal">
+        <img loading="lazy" src="images/pic2.png" alt="Team at work">
       </div>
-      <div class="about-image hidden right">
-        <div class="years-circle">
-          <span>15</span>
-          <p>Years of Experience</p>
-        </div>
-        <img src="images/about-placeholder.jpg" alt="Team at work" class="about-photo">
+      <div class="about-text reveal">
+        <h2>Craftsmanship, communication, and care.</h2>
+        <p>We’re a small, experienced team focused on quality and reliability. From first call to final handover, we keep you informed and deliver clean, compliant work.</p>
+        <ul>
+          <li>Transparent quotes & planning</li>
+          <li>Respect for your home and schedule</li>
+          <li>Fully insured & qualified trades</li>
+        </ul>
+        <a class="btn" href="contact.html">Request a Quote</a>
       </div>
     </div>
   </section>
-
-<!-- Contact Section -->
-<section id="contact" class="container">
-  <h2 class="section-title">Contact Us</h2>
-  <p class="section-subtitle">Get in touch to discuss your project or request a quote.</p>
-
-  <div class="form-wrapper">
-    <form id="contactForm" class="hidden up">
-      <!-- Personal Info -->
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="Your Email" required>
-      <input type="tel" id="phone" placeholder="Phone Number" required>
-
-      <!-- Services Selection -->
-      <div class="services">
-        <p>Select the services you need:</p>
-        <label><input type="checkbox" name="services" value="kitchen"> Kitchen Renovation</label>
-        <label><input type="checkbox" name="services" value="bathroom"> Bathroom Renovation</label>
-        <label><input type="checkbox" name="services" value="painting"> Painting & Decorating</label>
-        <label><input type="checkbox" name="services" value="tiling"> Tiling</label>
-        <label><input type="checkbox" name="services" value="flooring"> Flooring</label>
-        <label><input type="checkbox" name="services" value="extensions"> Extensions & Conversions</label>
-        <label><input type="checkbox" name="services" value="plumbing"> Plumbing</label>
-      </div>
-
-      <!-- Optional Project Details -->
-      <textarea id="message" placeholder="Project Details / Additional Info" rows="5"></textarea>
-
-      <!-- Submit -->
-      <button type="submit">Get a Quote</button>
-    </form>
-  </div>
-
-  <p id="formMsg" class="success-msg"></p>
-</section>
-
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Vital Maintenance. All rights reserved.</p>
+  <footer class="footer">
+    <p>© <span id="year"></span> Vital Maintenance. All rights reserved.</p>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="js/script.js" defer></script>
 </body>
 </html>

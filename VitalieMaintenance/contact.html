@@ -1,79 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vital Maintenance</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vital Maintenance – Contact</title>
+  <link rel="icon" href="images/logo.png" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- Header / Navigation -->
-   <header>
-      <nav class="navbar">
-          <div class="nav-logo slide-up">
-            <a href="index.html">
-              <img src="images/logo.png" alt="Vital Maintenance">
-            </a>
-          </div>
+  <!-- Header -->
+  <header class="navbar">
+    <a class="brand" href="index.html">
+      <img src="images/logo.png" alt="Vital Maintenance" />
+    </a>
 
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
 
-          <!-- Navigation Links -->
-          <ul class="nav-links">
-            <li class="slide-up"><a href="index.html">Home</a></li>
-            <li class="slide-up"><a href="ourwork.html">Our Work</a></li>
-            <li class="slide-up"><a href="contact.html">Contact</a></li>
-          </ul>
+    <nav>
+      <ul class="nav-links" id="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ourwork.html">Our Work</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-          <!-- Hamburger Icon -->
-          <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-      </nav>
-    </header>
-
-<!-- Contact Section -->
-<section id="contact" class="container">
-  <h2 class="section-title">Contact Us</h2>
-  <p class="section-subtitle">Get in touch to discuss your project or request a quote.</p>
-
-  <div class="form-wrapper">
-    <form id="contactForm" class="hidden up">
-      <!-- Personal Info -->
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="Your Email" required>
-      <input type="tel" id="phone" placeholder="Phone Number" required>
-
-      <!-- Services Selection -->
-      <div class="services">
-        <p>Select the services you need:</p>
-        <label><input type="checkbox" name="services" value="kitchen"> Kitchen Renovation</label>
-        <label><input type="checkbox" name="services" value="bathroom"> Bathroom Renovation</label>
-        <label><input type="checkbox" name="services" value="painting"> Painting & Decorating</label>
-        <label><input type="checkbox" name="services" value="tiling"> Tiling</label>
-        <label><input type="checkbox" name="services" value="flooring"> Flooring</label>
-        <label><input type="checkbox" name="services" value="extensions"> Extensions & Conversions</label>
-        <label><input type="checkbox" name="services" value="plumbing"> Plumbing</label>
+  <!-- Contact -->
+  <section class="contact-hero">
+    <div class="contact-head container reveal">
+      <img class="contact-logo" src="images/logo.png" alt="Vital Maintenance logo">
+      <div>
+        <h1>Request Your Quote</h1>
+        <p>Tell us about your project. We'll get back to you within one business day.</p>
       </div>
+    </div>
+  </section>
 
-      <!-- Optional Project Details -->
-      <textarea id="message" placeholder="Project Details / Additional Info" rows="5"></textarea>
+  <section class="section container">
+    <div class="form-grid">
 
-      <!-- Submit -->
-      <button type="submit">Get a Quote</button>
-    </form>
-  </div>
+      <!-- REAL EMAIL FORM -->
+      <form action="https://formsubmit.co/info@vital.ie"
+            method="POST"
+            class="form reveal">
 
-  <p id="formMsg" class="success-msg"></p>
-</section>
+        <!-- Hidden fields for FormSubmit -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_subject" value="New Quote Request - Vital Maintenance">
+        <input type="hidden" name="_next" value="https://yourdomain.com/thankyou.html">
 
+        <div class="row">
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" required />
+        </div>
+
+        <div class="row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+
+        <div class="row">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" required />
+        </div>
+
+        <div class="row">
+          <label for="projectType">Project Type</label>
+          <select id="projectType" name="projectType" required>
+            <option value="">Select a service…</option>
+            <option>Kitchen Renovation</option>
+            <option>Bathroom Renovation</option>
+            <option>Painting & Decorating</option>
+            <option>Tiling</option>
+            <option>Flooring</option>
+            <option>Extensions & Conversions</option>
+            <option>Plumbing</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="row two">
+          <div>
+            <label for="budget">Approx. Budget</label>
+            <select id="budget" name="budget" required>
+              <option value="">Choose…</option>
+              <option>€1k – €5k</option>
+              <option>€5k – €10k</option>
+              <option>€10k – €25k</option>
+              <option>€25k+</option>
+            </select>
+          </div>
+          <div>
+            <label for="start">Preferred Start</label>
+            <input id="start" name="start" type="date" />
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="message">Project Details</label>
+          <textarea id="message" name="message" rows="6"
+            placeholder="Tell us about size, rooms, timeline, and anything important"
+          ></textarea>
+        </div>
+
+        <button class="btn" type="submit">Request Quote</button>
+
+      </form>
+
+      <aside class="contact-aside reveal">
+        <h3>Prefer to talk?</h3>
+        <p>Email <a href="alexchiper20@gmail.com">alexchiper20@gmail.com</a><br>Phone <a href="tel:+353877301768">+353 85 730 1768</a></p>
+        <p class="note">Fully insured • References available • Dublin & nearby areas</p>
+      </aside>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Vital Maintenance. All rights reserved.</p>
+  <footer class="footer">
+    <p>© <span id="year"></span> Vital Maintenance. All rights reserved.</p>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="js/script.js" defer></script>
 </body>
 </html>

@@ -12,17 +12,10 @@ function throttle(fn, wait=80){
 document.querySelectorAll('#year').forEach(el => el.textContent = new Date().getFullYear());
 
 // Mobile nav toggle
-const burger = document.querySelector('.hamburger');
-const navList = document.querySelector('.nav-links');
-if (burger && navList){
-  burger.addEventListener('click', ()=>{
-    const open = navList.classList.toggle('open');
-    burger.setAttribute('aria-expanded', String(open));
-  });
-  navList.addEventListener('click', e=>{
-    if(e.target.matches('a')) navList.classList.remove('open');
-  });
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("open");
 }
+
 
 // Scroll reveal
 const reveals = document.querySelectorAll('.reveal, .card, .gallery-card, .form');

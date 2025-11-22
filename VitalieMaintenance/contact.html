@@ -9,28 +9,28 @@
 </head>
 <body>
   <!-- Header -->
-  <header class="navbar">
-    <a class="brand" href="index.html">
-      <img src="images/logo.png" alt="Vital Maintenance" />
-    </a>
+ <nav class="navbar">
+        <div href ="index.html" class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ourwork.html">Our Work</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
 
-    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav>
-      <ul class="nav-links" id="nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="ourwork.html">Our Work</a></li>
-        <li><a class="active" href="contact.html">Contact</a></li>
-      </ul>
+        <!-- Hamburger Icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
-  </header>
 
   <!-- Contact -->
   <section class="contact-hero">
     <div class="contact-head container reveal">
-      <img class="contact-logo" src="images/logo.png" alt="Vital Maintenance logo">
       <div>
         <h1>Request Your Quote</h1>
         <p>Tell us about your project. We'll get back to you within one business day.</p>
@@ -42,7 +42,7 @@
     <div class="form-grid">
 
       <!-- REAL EMAIL FORM -->
-      <form action="https://formsubmit.co/info@vital.ie"
+      <form action="https://formsubmit.co/vitalichiper@gmail.com"
             method="POST"
             class="form reveal">
 
@@ -112,7 +112,8 @@
 
       <aside class="contact-aside reveal">
         <h3>Prefer to talk?</h3>
-        <p>Email <a href="alexchiper20@gmail.com">alexchiper20@gmail.com</a><br>Phone <a href="tel:+353877301768">+353 85 730 1768</a></p>
+        <p>Email <a href="mailto:vitalichiper@gmail.com">vitalichiper@gmail.com</a><br>
+        Phone <a href="tel:+353857301768">+353 85 730 1768</a></p>
         <p class="note">Fully insured • References available • Dublin & nearby areas</p>
       </aside>
     </div>

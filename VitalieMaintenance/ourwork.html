@@ -9,23 +9,24 @@
 </head>
 <body>
   <!-- Header -->
-  <header class="navbar">
-    <a class="brand" href="index.html">
-      <img src="images/logo.png" alt="Vital Maintenance" />
-    </a>
+ <nav class="navbar">
+        <div href ="index.html" class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
 
-    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="">Our Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
 
-    <nav>
-      <ul class="nav-links" id="nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a class="active" href="ourwork.html">Our Work</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+        <!-- Hamburger Icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
-  </header>
 
   <!-- Hero small -->
   <section class="hero hero-sm">

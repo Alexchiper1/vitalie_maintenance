@@ -4,14 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vital Maintenance – Contact</title>
-  <link rel="icon" href="images/logo.png" />
+  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <!-- Header -->
  <nav class="navbar">
-        <div href ="index.html" class="logo">
-            <img src="images/logo.png" alt="Logo">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/LogoWhite1.png" alt="Logo">
+            </a>
         </div>
         
         <ul class="nav-links" id="navLinks">
@@ -42,73 +48,74 @@
     <div class="form-grid">
 
       <!-- REAL EMAIL FORM -->
-      <form action="https://formsubmit.co/vitalichiper@gmail.com"
-            method="POST"
-            class="form reveal">
+<form action="https://formsubmit.co/alexchiper20@gmail.com"
+      method="POST"
+      class="form reveal">
 
-        <!-- Hidden fields for FormSubmit -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_subject" value="New Quote Request - Vital Maintenance">
-        <input type="hidden" name="_next" value="https://yourdomain.com/thankyou.html">
+    <!-- Hidden settings -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_subject" value="New Quote Request - Vital Maintenance">
 
-        <div class="row">
-          <label for="name">Full Name</label>
-          <input id="name" name="name" type="text" required />
-        </div>
+    <!-- SUCCESS REDIRECT -->
+    <input type="hidden" name="_next" value="http://127.0.0.1:5500/thankyou.html">
 
-        <div class="row">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required />
-        </div>
+    <div class="row">
+      <label for="name">Full Name</label>
+      <input id="name" name="name" type="text" required>
+    </div>
 
-        <div class="row">
-          <label for="phone">Phone</label>
-          <input id="phone" name="phone" type="tel" required />
-        </div>
+    <div class="row">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+    </div>
 
-        <div class="row">
-          <label for="projectType">Project Type</label>
-          <select id="projectType" name="projectType" required>
-            <option value="">Select a service…</option>
-            <option>Kitchen Renovation</option>
-            <option>Bathroom Renovation</option>
-            <option>Painting & Decorating</option>
-            <option>Tiling</option>
-            <option>Flooring</option>
-            <option>Extensions & Conversions</option>
-            <option>Plumbing</option>
-            <option>Other</option>
-          </select>
-        </div>
+    <div class="row">
+      <label for="phone">Phone</label>
+      <input id="phone" name="phone" type="tel" required>
+    </div>
 
-        <div class="row two">
-          <div>
-            <label for="budget">Approx. Budget</label>
-            <select id="budget" name="budget" required>
-              <option value="">Choose…</option>
-              <option>€1k – €5k</option>
-              <option>€5k – €10k</option>
-              <option>€10k – €25k</option>
-              <option>€25k+</option>
-            </select>
-          </div>
-          <div>
-            <label for="start">Preferred Start</label>
-            <input id="start" name="start" type="date" />
-          </div>
-        </div>
+    <div class="row">
+      <label for="projectType">Project Type</label>
+      <select id="projectType" name="projectType" required>
+        <option value="">Select a service…</option>
+        <option>Kitchen Renovation</option>
+        <option>Bathroom Renovation</option>
+        <option>Painting & Decorating</option>
+        <option>Tiling</option>
+        <option>Flooring</option>
+        <option>Extensions & Conversions</option>
+        <option>Plumbing</option>
+        <option>Other</option>
+      </select>
+    </div>
 
-        <div class="row">
-          <label for="message">Project Details</label>
-          <textarea id="message" name="message" rows="6"
-            placeholder="Tell us about size, rooms, timeline, and anything important"
-          ></textarea>
-        </div>
+    <div class="row two">
+      <div>
+        <label for="budget">Approx. Budget</label>
+        <select id="budget" name="budget" required>
+          <option value="">Choose…</option>
+          <option>€1k – €5k</option>
+          <option>€5k – €10k</option>
+          <option>€10k – €25k</option>
+          <option>€25k+</option>
+        </select>
+      </div>
+      <div>
+        <label for="start">Preferred Start</label>
+        <input id="start" name="start" type="date">
+      </div>
+    </div>
 
-        <button class="btn" type="submit">Request Quote</button>
+    <div class="row">
+      <label for="message">Project Details</label>
+      <textarea id="message" name="message" rows="6"></textarea>
+    </div>
 
-      </form>
+    <button class="btn" type="submit">Request Quote</button>
+</form>
+
+
 
       <aside class="contact-aside reveal">
         <h3>Prefer to talk?</h3>

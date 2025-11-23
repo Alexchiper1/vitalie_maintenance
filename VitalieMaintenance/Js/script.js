@@ -35,12 +35,12 @@ if ('IntersectionObserver' in window){
 
 // Lightbox
 const galleries = {
-  kitchen: ["images/Kitchen/IMG_2281.png"],
-  bathroom: ["images/Bathroom/Bathroom.png","images/Bathroom/IMG_1855.png","images/Bathroom/IMG_2614.png","images/Bathroom/IMG_2615.png","images/Bathroom/IMG_2618.png","images/Bathroom/IMG_4015.png","images/Bathroom/IMG_4021.png"],
-  painting: ["images/Painting/Painting.png","images/Painting/IMG_0589.png"],
-  flooring: ["images/Flooring/Flooring.png","images/Flooring/IMG_3410.png","images/Flooring/IMG_3414.png","images/Flooring/IMG_1139.png","images/Flooring/IMG_1140.png","images/Flooring/IMG_1141.png","images/Flooring/IMG_4602.PNG","images/Flooring/IMG_4408.png","images/Flooring/IMG_1697.png"],
-  tiling: ["images/tiling/Tiling.png","images/tiling/tiling1.png","images/tiling/tiling2.png","images/tiling/tiling3.png","images/tiling/tiling4.png","images/tiling/tiling5.png","images/tiling/tiling6.png"],
-  extensions: ["images/Conversions & Extensions/Conversion.png","images/Conversions & Extensions/conversion1.png","images/Conversions & Extensions/conversion2.png","images/Conversions & Extensions/conversion3.png","images/Conversions & Extensions/conversion4.png","images/Conversions & Extensions/conversion5.png","images/Conversions & Extensions/shed.png","images/Conversions & Extensions/shed1.png","images/Conversions & Extensions/shed2.png","images/Conversions & Extensions/shed3.png","images/Conversions & Extensions/shed4.png"]
+  kitchen: ["images/Kitchen/IMG_2281.jpg"],
+  bathroom: ["images/Bathroom/Bathroom.png","images/Bathroom/IMG_1855.jpg","images/Bathroom/IMG_2614.jpg","images/Bathroom/IMG_2615.jpg","images/Bathroom/IMG_2618.jpg","images/Bathroom/IMG_4015.jpg","images/Bathroom/IMG_4021.jpg"],
+  painting: ["images/Painting/Painting.jpg","images/Painting/IMG_0589.jpg"],
+  flooring: ["images/Flooring/Flooring.png","images/Flooring/IMG_3410.jpg","images/Flooring/IMG_3414.jpg","images/Flooring/IMG_1139.jpg","images/Flooring/IMG_1140.jpg","images/Flooring/IMG_1141.jpg","images/Flooring/IMG_4602.jpg","images/Flooring/IMG_4408.jpg","images/Flooring/IMG_1697.jpg"],
+  tiling: ["images/tiling/Tiling.jpg","images/tiling/tiling1.jpg","images/tiling/tiling2.jpg","images/tiling/tiling3.jpg","images/tiling/tiling4.jpg","images/tiling/tiling5.jpg","images/tiling/tiling6.jpg"],
+  extensions: ["images/Conversions & Extensions/Conversion.png","images/Conversions & Extensions/conversion1.jpg","images/Conversions & Extensions/conversion2.jpg","images/Conversions & Extensions/conversion3.jpg","images/Conversions & Extensions/conversion4.jpg","images/Conversions & Extensions/conversion5.jpg","images/Conversions & Extensions/shed.jpg","images/Conversions & Extensions/shed1.jpg","images/Conversions & Extensions/shed2.jpg","images/Conversions & Extensions/shed3.jpg","images/Conversions & Extensions/shed4.jpg"]
 };
 
 let current = [];
@@ -96,4 +96,8 @@ window.addEventListener('keydown', e=>{
   if(e.key === 'Escape') closeLB();
   if(e.key === 'ArrowRight') nextImg();
   if(e.key === 'ArrowLeft') prevImg();
+});
+
+window.addEventListener("load", () => {
+  document.body.classList.add("page-loaded");
 });

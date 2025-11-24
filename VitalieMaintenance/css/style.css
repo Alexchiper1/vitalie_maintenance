@@ -1,5 +1,5 @@
 /* =======================================================
-   Vital Maintenance – Clean, Modern Frontend Stylesheet
+   Vitalie Maintenance Ltd – Clean, Modern Frontend Stylesheet
    Author: Alex Chiper
    ======================================================= */
 
@@ -73,9 +73,14 @@ img {
     font-family: bold;
 }
 
-.logo img{
+.logo img {
   height: 35px;
   width: auto;
+  transition: transform 0.25s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.12);
 }
 
 .nav-links {
@@ -92,6 +97,10 @@ img {
     padding-bottom: 5px;
     font-family: inherit;
 }
+.nav-links li a:hover {
+    color: var(--gold);
+}
+
 .nav-links li a::after {
     content: "";
     position: absolute;
@@ -176,7 +185,7 @@ img {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.55));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65));
 }
 
 .hero-content {
@@ -390,10 +399,29 @@ img {
   border-radius: 999px;
   font-weight: 700;
 }
-
 .gallery-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-md);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+}
+
+.gallery-card::after {
+  content: "Click to view";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.gallery-card:hover::after {
+  opacity: 1;
 }
 
 /* --------------------
@@ -407,7 +435,7 @@ img {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  z-index: 1200;
+  z-index: 10000;
   opacity: 0;
   transition: opacity var(--speed) var(--ease);
 }
@@ -562,6 +590,16 @@ select:focus {
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
+}
+.footer small a {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.footer small a:hover {
+  color: #ffe680;
 }
 
 /* --------------------

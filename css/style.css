@@ -682,16 +682,55 @@ img {
    CONTACT PAGE
 -------------------- */
 .contact-hero {
-  background: #fff;
-  border-bottom: 1px solid #e8eef3;
-  padding: 60px 10px 0 10px;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top right, rgba(255, 204, 0, 0.16), transparent 30%),
+    linear-gradient(135deg, #f3f8fb 0%, #e8f0f5 55%, #f9fbfd 100%);
+  border-bottom: 1px solid #dfe8ef;
+  padding: 88px 10px 2.25rem 10px;
 }
 
 .contact-head {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1.4rem 0;
+  padding: 0;
+}
+
+.contact-head > div {
+  width: 100%;
+  max-width: 760px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(232, 238, 243, 0.95);
+  border-radius: 18px;
+  box-shadow: 0 14px 34px rgba(0, 34, 51, 0.08);
+  padding: 1.5rem 1.35rem;
+  backdrop-filter: blur(4px);
+}
+
+.contact-head h1 {
+  margin-bottom: 0.45rem;
+  color: var(--navy);
+  line-height: 1.15;
+}
+
+.contact-subline {
+  margin-top: 0.65rem;
+  color: #56626b;
+  max-width: 60ch;
+}
+
+@media (max-width: 600px) {
+  .contact-hero {
+    padding-top: 78px;
+    padding-bottom: 1.5rem;
+  }
+
+  .contact-head > div {
+    padding: 1.2rem 1rem;
+    border-radius: 16px;
+  }
 }
 
 .contact-logo {
@@ -714,6 +753,13 @@ img {
   opacity: 0;
   transform: translateY(18px);
   transition: transform var(--speed) var(--ease), opacity var(--speed) var(--ease);
+}
+
+.form-trust-note {
+  margin-top: 0.9rem;
+  font-size: 0.92rem;
+  color: #56626b;
+  line-height: 1.55;
 }
 
 .row {
@@ -760,8 +806,34 @@ select:focus {
   padding: 1.2rem;
 }
 
+.contact-aside h3 {
+  color: var(--navy);
+  margin-bottom: 0.55rem;
+}
+
+.contact-aside h4 {
+  color: var(--navy);
+  font-size: 0.98rem;
+  margin-bottom: 0.35rem;
+}
+
+.contact-aside-lead {
+  color: #56626b;
+  margin-bottom: 0.85rem;
+}
+
+.contact-aside-block {
+  padding-top: 0.8rem;
+  margin-top: 0.8rem;
+  border-top: 1px solid #eef2f6;
+}
+
+.contact-aside-block p {
+  margin: 0;
+}
+
 .contact-aside .note {
-  margin-top: 0.6rem;
+  margin-top: 0.9rem;
   color: #56626b;
 }
 

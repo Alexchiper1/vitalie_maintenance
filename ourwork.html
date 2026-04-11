@@ -11,7 +11,7 @@
   <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body class="page-our-work">
   <!-- Header -->
  <nav class="navbar">
         <div class="logo">
@@ -22,7 +22,7 @@
 
         <ul class="nav-links" id="navLinks">
             <li><a href="index.html">Home</a></li>
-            <li><a href="">Our Work</a></li>
+            <li><a href="ourwork.html">Our Work</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
 
@@ -40,50 +40,85 @@
     <div class="hero-overlay"></div>
     <div class="hero-content container reveal">
       <h1>Our Work</h1>
-      <p>Click a category to browse the gallery.</p>
+      <p>Real kitchens, bathrooms, and renovations delivered for homeowners across Dublin.</p>
+    </div>
+  </section>
+
+  <section class="our-work-intro">
+    <div class="container container--wide">
+      <div class="our-work-intro-grid reveal">
+        <div class="our-work-intro-copy">
+          <p class="our-work-eyebrow">Portfolio</p>
+          <h2 class="our-work-intro-title">Craft-led projects, start to finish</h2>
+          <p class="our-work-lead">Browse work by trade: each gallery shows recent on-site photos from jobs we’ve completed. Open a category for a full-screen view — use the arrows or your keyboard to step through.</p>
+        </div>
+        <ul class="our-work-stats" aria-label="At a glance">
+          <li><strong>15+</strong> years on the tools</li>
+          <li><strong>250+</strong> projects delivered</li>
+          <li><strong>Fully</strong> insured &amp; registered</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <!-- Gallery -->
-  <section class="section container">
-    <div class="gallery-grid">
-      <button class="gallery-card reveal" data-gallery="kitchen">
-        <img loading="lazy" src="images/Kitchen/IMG_2281.jpg" alt="Kitchen" />
-        <span>Kitchen</span>
+  <section class="section our-work-gallery-block">
+    <div class="container container--wide">
+      <header class="our-work-section-head reveal">
+        <h2>Browse by category</h2>
+        <p>Choose a project type to explore photos. Hover a tile on desktop to preload the gallery for snappier viewing.</p>
+      </header>
+
+      <div class="gallery-grid">
+      <button type="button" class="gallery-card reveal" data-gallery="kitchen">
+        <img loading="lazy" src="images/Kitchen/IMG_2281.jpg" alt="Kitchen renovation with modern cabinetry" />
+        <span class="gallery-card-gradient" aria-hidden="true"></span>
+        <span class="gallery-card-label">Kitchen</span>
+        <span class="gallery-card-hint">Cabinetry, tiling &amp; electrics</span>
       </button>
 
-      <button class="gallery-card reveal" data-gallery="bathroom">
-        <img loading="lazy" src="images/Bathroom/Bathroom.jpg" alt="Bathroom" />
-
-        <span>Bathroom</span>
+      <button type="button" class="gallery-card reveal" data-gallery="bathroom">
+        <img loading="lazy" src="images/Bathroom/Bathroom.jpg" alt="Bathroom renovation with marble-style tiling" />
+        <span class="gallery-card-gradient" aria-hidden="true"></span>
+        <span class="gallery-card-label">Bathroom</span>
+        <span class="gallery-card-hint">Plumbing, waterproofing &amp; finishes</span>
       </button>
 
-      <button class="gallery-card reveal" data-gallery="painting">
-        <img loading="lazy" src="images/Painting/Painting.jpg" alt="Painting" />
-        <span>Painting</span>
+      <button type="button" class="gallery-card reveal" data-gallery="painting">
+        <img loading="lazy" src="images/Painting/Painting.jpg" alt="Interior painting in progress" />
+        <span class="gallery-card-gradient" aria-hidden="true"></span>
+        <span class="gallery-card-label">Painting</span>
+        <span class="gallery-card-hint">Interior &amp; exterior decorating</span>
       </button>
 
-      <button class="gallery-card reveal" data-gallery="tiling">
-        <img loading="lazy" src="images/tiling/Tiling.jpg" alt="Tiling" />
-        <span>Tiling</span>
+      <button type="button" class="gallery-card reveal" data-gallery="tiling">
+        <img loading="lazy" src="images/tiling/Tiling.jpg" alt="Tiled wall detail" />
+        <span class="gallery-card-gradient" aria-hidden="true"></span>
+        <span class="gallery-card-label">Tiling</span>
+        <span class="gallery-card-hint">Floors, walls &amp; wet rooms</span>
       </button>
 
-      <button class="gallery-card reveal" data-gallery="flooring">
-        <img loading="lazy" src="images/Flooring/Flooring.jpg" alt="Flooring" />
-        <span>Flooring</span>
+      <button type="button" class="gallery-card reveal" data-gallery="flooring">
+        <img loading="lazy" src="images/Flooring/Flooring.jpg" alt="Wood-style flooring installation" />
+        <span class="gallery-card-gradient" aria-hidden="true"></span>
+        <span class="gallery-card-label">Flooring</span>
+        <span class="gallery-card-hint">Laminate, LVT &amp; prep</span>
       </button>
 
-      <button class="gallery-card reveal" data-gallery="extensions">
-        <img loading="lazy" src="images/Conversions & Extensions/Conversion.jpg" alt="Extensions" />
-        <span>Extensions</span>
+      <button type="button" class="gallery-card reveal" data-gallery="extensions">
+        <img loading="lazy" src="images/Conversions & Extensions/Conversion.jpg" alt="Extension and conversion work" />
+        <span class="gallery-card-gradient" aria-hidden="true"></span>
+        <span class="gallery-card-label">Extensions</span>
+        <span class="gallery-card-hint">Conversions, sheds &amp; structural</span>
       </button>
+    </div>
     </div>
   </section>
 
   <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Photo gallery">
     <button class="lightbox-close" id="lb-close" aria-label="Close">×</button>
-    <img class="lightbox-img" id="lightbox-img" alt="">
+    <img class="lightbox-img" id="lightbox-img" alt="" decoding="async">
     <div class="lightbox-cap" id="lightbox-cap"></div>
     <button class="lightbox-arrow left" id="lb-prev" aria-label="Previous">‹</button>
     <button class="lightbox-arrow right" id="lb-next" aria-label="Next">›</button>

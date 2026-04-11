@@ -43,6 +43,18 @@ const galleries = {
   extensions: ["images/Conversions & Extensions/Conversion.jpg","images/Conversions & Extensions/conversion1.jpg","images/Conversions & Extensions/conversion2.jpg","images/Conversions & Extensions/conversion3.jpg","images/Conversions & Extensions/conversion4.jpg","images/Conversions & Extensions/conversion5.jpg","images/Conversions & Extensions/shed.jpg","images/Conversions & Extensions/shed1.jpg","images/Conversions & Extensions/shed2.jpg","images/Conversions & Extensions/shed3.jpg","images/Conversions & Extensions/shed4.jpg"]
 };
 
+const preloadedFullSize = new Set();
+
+/** Warm browser cache for full gallery so arrow navigation is instant (thumbs are separate requests). */
+function preloadGalleryImages(urls) {
+  urls.forEach((url) => {
+    if (preloadedFullSize.has(url)) return;
+    preloadedFullSize.add(url);
+    const img = new Image();
+    img.src = url;
+  });
+}
+
 let current = [];
 let idx = 0;
 
@@ -56,32 +68,44 @@ const lbClose = document.getElementById('lb-close');
 function openGallery(key){
   current = galleries[key] || [];
   if (!current.length || !lb || !lbImg) return;
+  preloadGalleryImages(current);
   idx = 0;
   lbImg.src = current[idx];
+  lbImg.alt = `Project photo ${idx + 1} of ${current.length}`;
   lbCap.textContent = `${idx+1} / ${current.length}`;
   lb.classList.add('open');
+  lb.setAttribute('aria-hidden', 'false');
   document.documentElement.style.overflow = 'hidden';
 }
 
 function nextImg(){
   idx = (idx + 1) % current.length;
   lbImg.src = current[idx];
+  lbImg.alt = `Project photo ${idx + 1} of ${current.length}`;
   lbCap.textContent = `${idx+1} / ${current.length}`;
 }
 
 function prevImg(){
   idx = (idx - 1 + current.length) % current.length;
   lbImg.src = current[idx];
+  lbImg.alt = `Project photo ${idx + 1} of ${current.length}`;
   lbCap.textContent = `${idx+1} / ${current.length}`;
 }
 
 function closeLB(){
   lb.classList.remove('open');
+  lb.setAttribute('aria-hidden', 'true');
   document.documentElement.style.overflow = '';
 }
 
 document.querySelectorAll('.gallery-card').forEach(btn=>{
   btn.addEventListener('click', ()=> openGallery(btn.dataset.gallery));
+  const prewarm = () => {
+    const urls = galleries[btn.dataset.gallery];
+    if (urls) preloadGalleryImages(urls);
+  };
+  btn.addEventListener('mouseenter', prewarm);
+  btn.addEventListener('touchstart', prewarm, { passive: true });
 });
 lbNext?.addEventListener('click', nextImg);
 lbPrev?.addEventListener('click', prevImg);

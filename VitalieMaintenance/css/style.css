@@ -76,7 +76,7 @@ img {
 .logo img {
   height: 35px;
   width: auto;
-  transition: transform 0.25s ease;
+  transition: transform 0.40s ease;
 }
 
 .logo img:hover {
@@ -175,7 +175,7 @@ img {
   height: 100%;
   object-fit: cover;
   transform: scale(1.04);
-  transition: transform 1.2s var(--ease);
+  transition: transform 1.5s var(--ease);
 }
 
 .hero:hover .hero-bg {
@@ -225,7 +225,7 @@ img {
   padding: 0.9rem 1.2rem;
   border-radius: 999px;
   box-shadow: 0 12px 26px rgba(0, 68, 102, 0.28);
-  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), background 0.25s var(--ease);
+  transition: transform 0.40s var(--ease), box-shadow 0.40s var(--ease), background 0.40s var(--ease);
 }
 
 .btn:hover {
@@ -622,4 +622,50 @@ select:focus {
     transition: none !important;
     animation: none !important;
   }
+}
+/*Thank you part*/
+
+  .thankyou-title {
+    color: #003a57; /* dark navy */
+    text-shadow: none;
+  }
+  .thankyou-subtitle {
+    color: #003a57; /* dark navy */
+    opacity: 0.9;
+  }
+
+/* --------------------
+   REVIEWS SECTION
+-------------------- */
+.ti-widget {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.no-reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* WhatsApp Floating Button - Navy Themed + Pulse */
+.whatsapp-float {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  background: #004466;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+  z-index: 99999;
+  animation: whatsapp-pulse 2.8s infinite;
+}
+
+.whatsapp-icon {
+  width: 34px;
+  height: 34px;
+  filter: brightness(0) invert(1);
 }

@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vitalie Maintenance Ltd– Home</title>
   <meta name="description" content="Reliable renovations and maintenance across Dublin: kitchens, bathrooms, painting, tiling, flooring, and extensions." />
-  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="icon" href="favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" href="favicon.svg" />
+  <link rel="icon" href="favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
   <link rel="manifest" href="site.webmanifest" />
 
   <link rel="stylesheet" href="css/style.css" />
+  <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+
 </head>
 <body>
  <nav class="navbar">
@@ -105,6 +107,26 @@
     </div>
   </section>
 
+
+<section class="section container no-reveal">
+  <header class="section-head">
+    <h2>What Our Clients Say</h2>
+    <p>Trusted by homeowners across Dublin.</p>
+  </header>
+
+  <!-- Trustindex PRO widget -->
+  <amp-iframe 
+      src="https://cdn.trustindex.io/amp-widget.html#ad2ae0a5912a1586c416a84a23e"
+      sandbox="allow-scripts allow-same-origin"
+      layout="fixed-height"
+      width="100%"
+      height="280"
+      resizable>
+      <span overflow></span>
+  </amp-iframe>
+</section>
+
+
   <!-- Footer -->
   <footer class="footer">
     <p>© <span id="year"></span> Vitalie Maintenance Ltd. All rights reserved.</p>
@@ -115,5 +137,29 @@
 </small>
   </footer>
   <script src="js/script.js" defer></script>
+
+  <!-- WhatsApp Floating Button (INLINE FIX) -->
+  <a href="https://wa.me/353857301768"
+    target="_blank"
+    aria-label="Chat on WhatsApp"
+    style="
+      position:fixed;
+      bottom:22px;
+      right:22px;
+      width:62px;
+      height:62px;
+      border-radius:50%;
+      background:#004466;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 6px 18px rgba(0,0,0,.28);
+      z-index:999999;
+    ">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="WhatsApp"
+        style="width:34px;height:34px;filter:brightness(0) invert(1);display:block;">
+  </a>
+
 </body>
 </html>

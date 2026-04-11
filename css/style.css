@@ -635,16 +635,207 @@ select:focus {
   }
 
 /* --------------------
-   REVIEWS SECTION
+   REVIEWS SECTION (Google)
 -------------------- */
-.ti-widget {
-  opacity: 1 !important;
-  transform: none !important;
+.reviews-section {
+  padding-bottom: 3.5rem;
 }
 
-.no-reveal {
-  opacity: 1 !important;
-  transform: none !important;
+.reviews-google-summary {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 520px;
+  margin: 0 auto 1.75rem;
+  padding: 1rem 1.25rem;
+  background: #fff;
+  border: 1px solid #e8eef3;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.reviews-google-logo {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #dadce0;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: #4285f4;
+  font-family: "Product Sans", system-ui, sans-serif;
+}
+
+.reviews-stars {
+  color: #fbbc04;
+  letter-spacing: 2px;
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.reviews-stars--sm {
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+
+.reviews-google-meta {
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+  color: #56626b;
+}
+
+.reviews-google-meta strong {
+  color: var(--navy);
+}
+
+.reviews-carousel {
+  position: relative;
+  padding: 0 2.75rem;
+  margin: 0 auto;
+  max-width: 640px;
+}
+
+.reviews-viewport {
+  overflow: hidden;
+  width: 100%;
+  min-height: 200px;
+  border-radius: var(--radius);
+  outline: none;
+}
+
+.reviews-viewport:focus-visible {
+  box-shadow: 0 0 0 3px rgba(0, 68, 102, 0.35);
+}
+
+.reviews-track {
+  display: flex;
+  will-change: transform;
+}
+
+.reviews-slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  padding: 0 6px;
+  box-sizing: border-box;
+}
+
+.reviews-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #e8eef3;
+  background: #fff;
+  color: var(--navy);
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  box-shadow: var(--shadow-sm);
+  transition: background var(--speed) var(--ease), color var(--speed) var(--ease),
+    box-shadow var(--speed) var(--ease);
+}
+
+.reviews-nav:hover:not(:disabled) {
+  background: var(--navy);
+  color: #fff;
+  box-shadow: var(--shadow-md);
+}
+
+.reviews-nav:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.reviews-nav--prev {
+  left: 0;
+}
+
+.reviews-nav--next {
+  right: 0;
+}
+
+@media (max-width: 480px) {
+  .reviews-carousel {
+    padding: 0 2.35rem;
+  }
+
+  .reviews-nav {
+    width: 38px;
+    height: 38px;
+    font-size: 1.45rem;
+  }
+}
+
+.review-card {
+  background: #fff;
+  border: 1px solid #e8eef3;
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--speed) var(--ease);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.review-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.review-card-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.65rem;
+}
+
+.review-author {
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.review-text {
+  font-size: 0.98rem;
+  line-height: 1.55;
+  margin: 0 0 0.75rem;
+}
+
+.review-text--muted {
+  color: #56626b;
+  font-style: italic;
+}
+
+.review-when {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #8899a6;
+}
+
+.reviews-google-link {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.reviews-google-link a {
+  color: var(--navy);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(0, 68, 102, 0.25);
+  transition: border-color var(--speed) var(--ease), color var(--speed) var(--ease);
+}
+
+.reviews-google-link a:hover {
+  color: #006699;
+  border-bottom-color: rgba(0, 102, 153, 0.45);
 }
 
 /* WhatsApp Floating Button - Navy Themed + Pulse */

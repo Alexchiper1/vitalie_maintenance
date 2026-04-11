@@ -1,0 +1,27 @@
+{
+  "google": {
+    "rating": 5,
+    "reviewCount": 4,
+    "location": "Clonee, Dublin 15"
+  },
+  "reviews": [
+    {
+      "author": "Julia R",
+      "stars": 5,
+      "text": "Amazing tiling job done in the downstairs bathroom, would highly recommend 👍",
+      "when": "2 months ago"
+    },
+    {
+      "author": "Anna Maria Chiper",
+      "stars": 5,
+      "text": "I recently had these frames built onto my wall, quick fast & reliable work would recommend to anyone looking for any work done. very professional thank you 🥰",
+      "when": "4 months ago"
+    },
+    {
+      "author": "Mateusz Kietrys",
+      "stars": 5,
+      "text": "",
+      "when": "4 months ago"
+    }
+  ]
+}

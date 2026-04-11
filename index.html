@@ -12,7 +12,6 @@
   <link rel="manifest" href="site.webmanifest" />
 
   <link rel="stylesheet" href="css/style.css" />
-  <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
 
 </head>
 <body>
@@ -108,23 +107,38 @@
   </section>
 
 
-<section class="section container no-reveal">
-  <header class="section-head">
-    <h2>What Our Clients Say</h2>
-    <p>Trusted by homeowners across Dublin.</p>
-  </header>
+  <section class="section container reviews-section" id="reviews" aria-labelledby="reviews-heading">
+    <header class="section-head reveal">
+      <h2 id="reviews-heading">What Our Clients Say</h2>
+      <p>Trusted by homeowners across Dublin — recent reviews from Google.</p>
+    </header>
 
-  <!-- Trustindex PRO widget -->
-  <amp-iframe 
-      src="https://cdn.trustindex.io/amp-widget.html#ad2ae0a5912a1586c416a84a23e"
-      sandbox="allow-scripts allow-same-origin"
-      layout="fixed-height"
-      width="100%"
-      height="280"
-      resizable>
-      <span overflow></span>
-  </amp-iframe>
-</section>
+    <div class="reviews-google-summary reveal" id="reviews-summary-block" role="img" aria-label="5 out of 5 stars on Google, based on 4 reviews">
+      <span class="reviews-google-logo" aria-hidden="true">G</span>
+      <div>
+        <div class="reviews-stars" aria-hidden="true">★★★★★</div>
+        <p class="reviews-google-meta" id="reviews-summary-text"><strong>5.0</strong> on Google · 4 reviews · Clonee, Dublin 15</p>
+      </div>
+    </div>
+
+    <div class="reviews-carousel reveal" data-interval="2000" role="presentation">
+      <button type="button" class="reviews-nav reviews-nav--prev" aria-label="Previous review">‹</button>
+      <div
+        class="reviews-viewport"
+        tabindex="0"
+        role="region"
+        aria-roledescription="carousel"
+        aria-label="Customer reviews from Google"
+        aria-live="off">
+        <div class="reviews-track" id="reviews-track"></div>
+      </div>
+      <button type="button" class="reviews-nav reviews-nav--next" aria-label="Next review">›</button>
+    </div>
+
+    <p class="reviews-google-link reveal">
+      <a href="https://www.google.com/search?q=Vitalie+Maintenance+Ltd+Dublin+15+reviews" target="_blank" rel="noopener noreferrer">See reviews on Google</a>
+    </p>
+  </section>
 
 
   <!-- Footer -->
@@ -136,7 +150,8 @@
     </a>
 </small>
   </footer>
-  <script src="js/script.js" defer></script>
+  <script src="Js/reviews-carousel.js" defer></script>
+  <script src="Js/script.js" defer></script>
 
   <!-- WhatsApp Floating Button (INLINE FIX) -->
   <a href="https://wa.me/353857301768"

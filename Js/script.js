@@ -92,7 +92,7 @@ lb?.addEventListener('click', e => {
 });
 
 window.addEventListener('keydown', e=>{
-  if(!lb.classList.contains('open')) return;
+  if(!lb?.classList.contains('open')) return;
   if(e.key === 'Escape') closeLB();
   if(e.key === 'ArrowRight') nextImg();
   if(e.key === 'ArrowLeft') prevImg();
@@ -108,4 +108,3 @@ if (dateInput) {
     const today = new Date().toISOString().split("T")[0];
     dateInput.setAttribute("min", today);
 }
-

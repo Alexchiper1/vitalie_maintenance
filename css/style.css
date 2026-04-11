@@ -209,6 +209,16 @@ img {
   margin-top: 0.35rem;
 }
 
+@media (max-width: 768px) {
+  .hero {
+    min-height: 72vh;
+  }
+
+  .hero-content {
+    padding-top: 4.75rem;
+  }
+}
+
 .cta {
   display: flex;
   justify-content: center;

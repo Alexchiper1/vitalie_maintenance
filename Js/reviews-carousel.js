@@ -103,11 +103,20 @@
   let slidesCount = 0;
   let touchStartX = null;
 
+  function slideStepPx() {
+    if (!viewport) return 0;
+    const first = track.querySelector(".reviews-slide");
+    if (first) return first.getBoundingClientRect().width;
+    return viewport.clientWidth || viewport.getBoundingClientRect().width;
+  }
+
   function applyTransform(smooth) {
     if (!track) return;
     const useMotion = smooth && !reduceMotion;
     track.style.transition = useMotion ? "transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1)" : "none";
-    track.style.transform = `translateX(-${index * 100}%)`;
+    // Pixel offset: each slide is one “step” wide (avoids % translate bugs vs track width)
+    const step = slideStepPx();
+    track.style.transform = `translateX(-${index * step}px)`;
     root.dataset.slide = String(index + 1);
     root.dataset.slides = String(slidesCount);
   }
@@ -182,6 +191,7 @@
       slidesCount = 1;
     }
     applyTransform(false);
+    requestAnimationFrame(() => applyTransform(false));
     btnPrev.disabled = slidesCount <= 1;
     btnNext.disabled = slidesCount <= 1;
 
@@ -241,5 +251,11 @@
         : null;
     if (io) io.observe(root);
     else startTimer();
+
+    let resizeTick;
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTick);
+      resizeTick = setTimeout(() => applyTransform(false), 80);
+    });
   });
 })();

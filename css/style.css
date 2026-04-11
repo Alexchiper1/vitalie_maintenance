@@ -902,14 +902,20 @@ select:focus {
 
 .reviews-track {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
   will-change: transform;
 }
 
 .reviews-slide {
   flex: 0 0 100%;
-  min-width: 0;
-  padding: 0 6px;
+  min-width: 100%;
+  max-width: 100%;
+  padding: 0 8px;
   box-sizing: border-box;
+  display: flex;
+  align-items: stretch;
 }
 
 .reviews-nav {
@@ -953,14 +959,41 @@ select:focus {
 }
 
 @media (max-width: 480px) {
+  .reviews-section {
+    padding-left: 0.55rem;
+    padding-right: 0.55rem;
+  }
+
+  .reviews-google-summary {
+    padding: 0.95rem 1rem;
+    margin-bottom: 1.25rem;
+  }
+
   .reviews-carousel {
-    padding: 0 2.35rem;
+    padding: 0 2.9rem;
   }
 
   .reviews-nav {
     width: 38px;
     height: 38px;
     font-size: 1.45rem;
+  }
+
+  .reviews-nav--prev {
+    left: 0.15rem;
+  }
+
+  .reviews-nav--next {
+    right: 0.15rem;
+  }
+
+  .reviews-slide {
+    padding: 0 0.35rem;
+  }
+
+  .review-card {
+    padding: 1.1rem;
+    min-height: 255px;
   }
 }
 
@@ -973,6 +1006,10 @@ select:focus {
   transition: box-shadow var(--speed) var(--ease);
   max-width: 520px;
   margin: 0 auto;
+  width: 100%;
+  min-height: 235px;
+  display: flex;
+  flex-direction: column;
 }
 
 .review-card:hover {
@@ -1008,6 +1045,7 @@ select:focus {
   margin: 0;
   font-size: 0.82rem;
   color: #8899a6;
+  margin-top: auto;
 }
 
 .reviews-google-link {

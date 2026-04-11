@@ -365,6 +365,45 @@ img {
 }
 
 /* --------------------
+   HOME CTA
+-------------------- */
+.home-cta {
+  padding-top: 0;
+  padding-bottom: 3.5rem;
+}
+
+.home-cta-card {
+  background: linear-gradient(135deg, #eef5f9 0%, #f8fbfd 100%);
+  border: 1px solid #dfe8ef;
+  border-radius: 18px;
+  box-shadow: var(--shadow-sm);
+  padding: 2rem 1.4rem;
+  text-align: center;
+}
+
+.home-cta-card h2 {
+  color: var(--navy);
+  margin-bottom: 0.45rem;
+}
+
+.home-cta-card p {
+  margin: 0 auto 1rem;
+  max-width: 620px;
+  color: #56626b;
+}
+
+.home-cta-ghost {
+  background: transparent;
+  border: 2px solid var(--navy);
+  color: var(--navy);
+}
+
+.home-cta-ghost:hover {
+  background: var(--navy);
+  color: #fff;
+}
+
+/* --------------------
    GALLERY / OUR WORK
 -------------------- */
 .our-work-intro {

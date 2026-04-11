@@ -264,15 +264,27 @@ img {
   border-radius: 12px;
   padding: 1rem;
   box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 92px;
+  gap: 0.2rem;
 }
 
 .trust-item strong {
   font-size: 1.4rem;
   color: var(--navy);
+  display: block;
+  line-height: 1.1;
 }
 
 .trust-item span {
   color: #56626b;
+  display: block;
+  max-width: 12ch;
+  line-height: 1.35;
+  text-wrap: balance;
 }
 
 /* --------------------

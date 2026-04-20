@@ -342,6 +342,24 @@ img {
   color: var(--navy);
 }
 
+.card-link {
+  padding: 0;
+  overflow: hidden;
+}
+
+.card-link-wrap {
+  display: block;
+  height: 100%;
+  padding: 1rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-link-wrap:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: -3px;
+}
+
 .card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-md);

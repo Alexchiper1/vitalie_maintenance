@@ -3,44 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact | Get a Renovation Quote in Dublin</title>
+
+  <title>Get a Renovation Quote in Dublin | Vitalie Maintenance Ltd</title>
+  <meta name="description" content="Request a quote from Vitalie Maintenance Ltd for kitchens, bathrooms, tiling, flooring, painting, plumbing, extensions and home maintenance in Dublin." />
+
   <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="shortcut icon" href="favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
   <link rel="manifest" href="site.webmanifest" />
+
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-  <!-- Header -->
- <nav class="navbar">
-        <div class="logo">
-            <a href="index.html">
-                <img src="images/LogoWhite1.png" alt="Logo">
-            </a>
-        </div>
-        
-        <ul class="nav-links" id="navLinks">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="ourwork.html">Our Work</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
 
-        <!-- Hamburger Icon -->
-        <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/LogoWhite1.png" alt="Vitalie Maintenance Ltd logo">
+      </a>
+    </div>
 
-  <!-- Contact -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+
+      <li class="nav-dropdown">
+        <a href="index.html#services">Services</a>
+        <div class="nav-dropdown-menu">
+          <a href="kitchen-renovation-dublin.html">Kitchen Renovations</a>
+          <a href="bathroom-renovation-dublin.html">Bathroom Renovations</a>
+          <a href="tiling-dublin.html">Tiling</a>
+          <a href="flooring-dublin.html">Flooring</a>
+          <a href="painting-decorating-dublin.html">Painting</a>
+          <a href="house-extensions-dublin.html">Extensions</a>
+        </div>
+      </li>
+
+      <li><a href="ourwork.html">Our Work</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="hamburger" onclick="toggleMenu()" aria-label="Open menu" role="button" tabindex="0">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
   <section class="contact-hero">
     <div class="contact-head container reveal">
       <div>
-        <h1>Request Your Quote</h1>
-        <p>Serving Dublin and nearby areas. Tell us about your project and we'll get back to you within one business day.</p>
-        <p class="contact-subline">Call us for an estimate. Site planning and a finalised quote are charged where extra design or planning work is required.</p>
+        <p class="our-work-eyebrow">Get a quote</p>
+        <h1>Request Your Renovation Quote</h1>
+        <p>Serving Dublin and nearby areas. Tell us about your project and we will get back to you as quickly as possible.</p>
+        <p class="contact-subline">For the fastest estimate, send photos by WhatsApp with your location, rough measurements, budget and preferred start date.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container lead-section contact-quick">
+    <div class="lead-card reveal">
+      <div>
+        <h2>Need a quote quickly?</h2>
+        <p>Call or WhatsApp us with photos of the job. This is usually faster than explaining everything in text only.</p>
+      </div>
+
+      <div class="cta lead-card-cta">
+        <a href="tel:+353857301768" class="btn">Call +353 85 730 1768</a>
+        <a href="https://wa.me/353857301768?text=Hi%20Vitalie%20Maintenance%2C%20I%27d%20like%20a%20quote%20for%20a%20job%20in%20Dublin.%20I%20can%20send%20photos%20and%20details." class="btn home-cta-ghost">WhatsApp Photos</a>
       </div>
     </div>
   </section>
@@ -48,81 +79,86 @@
   <section class="section container">
     <div class="form-grid">
 
-      <!-- REAL EMAIL FORM -->
-<form action="https://formsubmit.co/vitaliemaintenanceltd@gmail.com"
-      method="POST"
-      class="form reveal">
+      <form action="https://formsubmit.co/vitaliemaintenanceltd@gmail.com" method="POST" class="form reveal">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_subject" value="New Quote Request - Vitalie Maintenance Ltd">
+        <input type="hidden" name="_next" value="https://melodic-capybara-3c0c5b.netlify.app/thankyou.html">
 
-    <!-- Hidden settings -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_subject" value="New Quote Request - Vitalie Maintenance Ltd">
+        <div class="row">
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" required>
+        </div>
 
-    <!-- SUCCESS REDIRECT -->
-  <input type="hidden" name="_next" value="https://melodic-capybara-3c0c5b.netlify.app/thankyou.html">
-    <div class="row">
-      <label for="name">Full Name</label>
-      <input id="name" name="name" type="text" required>
-    </div>
+        <div class="row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+        </div>
 
-    <div class="row">
-      <label for="email">Email</label>
-      <input id="email" name="email" type="email" required>
-    </div>
+        <div class="row">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" required>
+        </div>
 
-    <div class="row">
-      <label for="phone">Phone</label>
-      <input id="phone" name="phone" type="tel" required>
-    </div>
+        <div class="row">
+          <label for="location">Project Location</label>
+          <input id="location" name="location" type="text" placeholder="Example: Dublin 15, Clonee, Blanchardstown" required>
+        </div>
 
-    <div class="row">
-      <label for="projectType">Project Type</label>
-      <select id="projectType" name="projectType" required>
-        <option value="">Select a service…</option>
-        <option>Kitchen Renovation</option>
-        <option>Bathroom Renovation</option>
-        <option>Painting & Decorating</option>
-        <option>Tiling</option>
-        <option>Flooring</option>
-        <option>Extensions & Conversions</option>
-        <option>Plumbing</option>
-        <option>Other</option>
-      </select>
-    </div>
+        <div class="row">
+          <label for="projectType">Project Type</label>
+          <select id="projectType" name="projectType" required>
+            <option value="">Select a service…</option>
+            <option>Kitchen Renovation</option>
+            <option>Bathroom Renovation</option>
+            <option>Painting & Decorating</option>
+            <option>Tiling</option>
+            <option>Flooring</option>
+            <option>Extensions & Conversions</option>
+            <option>Plumbing</option>
+            <option>Home Maintenance</option>
+            <option>Other</option>
+          </select>
+        </div>
 
-    <div class="row two">
-      <div>
-        <label for="budget">Approx. Budget</label>
-        <select id="budget" name="budget" required>
-          <option value="">Choose…</option>
-          <option>€1k – €5k</option>
-          <option>€5k – €10k</option>
-          <option>€10k – €25k</option>
-          <option>€25k+</option>
-        </select>
-      </div>
-      <div>
-        <label for="start">Preferred Start</label>
-        <input id="start" name="start" type="date">
-      </div>
-    </div>
+        <div class="row two">
+          <div>
+            <label for="budget">Approx. Budget</label>
+            <select id="budget" name="budget" required>
+              <option value="">Choose…</option>
+              <option>€1k – €5k</option>
+              <option>€5k – €10k</option>
+              <option>€10k – €25k</option>
+              <option>€25k+</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
 
-    <div class="row">
-      <label for="message">Project Details</label>
-      <textarea id="message" name="message" rows="6" required placeholder="Tell us about the work you need, property type, and anything important we should know."></textarea>
-    </div>
+          <div>
+            <label for="start">Preferred Start</label>
+            <input id="start" name="start" type="date">
+          </div>
+        </div>
 
-    <button class="btn" type="submit">Request Quote</button>
-    <p class="form-trust-note">Your details are only used to reply to your enquiry and arrange your estimate. Site planning and finalised quotes are charged where required.</p>
-</form>
+        <div class="row">
+          <label for="message">Project Details</label>
+          <textarea id="message" name="message" rows="6" required placeholder="Tell us what you need, property type, room size, current condition, and any photos you can send by WhatsApp."></textarea>
+        </div>
 
+        <button class="btn" type="submit">Request Quote</button>
 
+        <p class="form-trust-note">Your details are only used to reply to your enquiry and arrange your estimate. Site planning and finalised quotes are charged where extra design or planning work is involved.</p>
+      </form>
 
       <aside class="contact-aside reveal">
         <h3>Prefer to talk?</h3>
-        <p class="contact-aside-lead">Call us for an estimate or send your details and we will get back to you quickly.</p>
-        <p>Email <a href="mailto:vitaliemaintenanceltd@gmail.com">vitaliemaintenanceltd@gmail.com</a><br>
-        Phone <a href="tel:+353857301768">+353 85 730 1768</a></p>
+        <p class="contact-aside-lead">Call us or send your details and we will get back to you quickly.</p>
+
+        <p>
+          Email <a href="mailto:vitaliemaintenanceltd@gmail.com">vitaliemaintenanceltd@gmail.com</a><br>
+          Phone <a href="tel:+353857301768">+353 85 730 1768</a><br>
+          WhatsApp <a href="https://wa.me/353857301768?text=Hi%20Vitalie%20Maintenance%2C%20I%27d%20like%20a%20quote%20for%20a%20job%20in%20Dublin.%20I%20can%20send%20photos%20and%20details.">Send project photos</a>
+        </p>
 
         <div class="contact-aside-block">
           <h4>Opening Hours</h4>
@@ -131,53 +167,47 @@
 
         <div class="contact-aside-block">
           <h4>Areas Covered</h4>
-          <p>Dublin and surrounding areas.</p>
+          <p>Dublin, Dublin 15, Clonee, Blanchardstown, Castleknock, Ongar, Lucan, Swords and surrounding areas.</p>
         </div>
 
         <div class="contact-aside-block">
-          <h4>How We Help</h4>
-          <p>Estimates available, with site planning and finalised quotes charged where extra design or planning work is involved.</p>
+          <h4>How to get a faster quote</h4>
+          <p>Send photos, measurements, your location, budget range and preferred start date.</p>
         </div>
 
         <p class="note">Fully insured • References available • Reliable workmanship</p>
       </aside>
+
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
-    <p>© <span id="year"></span> Vitalie Maintenance Ltd. All rights reserved.</p>
-    <small>Website built by 
-    <a href="https://github.com/Alexchiper1" target="_blank" rel="noopener">
-        Alexander Chiper
-    </a>
-  </small>
-  </footer>
+    <div class="footer-inner">
+      <p>© <span id="year"></span> Vitalie Maintenance Ltd. All rights reserved.</p>
 
+      <p class="footer-links">
+        <a href="kitchen-renovation-dublin.html">Kitchens</a> ·
+        <a href="bathroom-renovation-dublin.html">Bathrooms</a> ·
+        <a href="tiling-dublin.html">Tiling</a> ·
+        <a href="flooring-dublin.html">Flooring</a> ·
+        <a href="painting-decorating-dublin.html">Painting</a> ·
+        <a href="contact.html">Get a Quote</a>
+      </p>
+
+      <small>
+        Website built by
+        <a href="https://github.com/Alexchiper1" target="_blank" rel="noopener">Alexander Chiper</a>
+      </small>
+    </div>
+  </footer>
 
   <script src="Js/script.js" defer></script>
 
-  <!-- WhatsApp Floating Button (INLINE FIX) -->
-  <a href="https://wa.me/353857301768"
-    target="_blank"
-    aria-label="Chat on WhatsApp"
-    style="
-      position:fixed;
-      bottom:22px;
-      right:22px;
-      width:62px;
-      height:62px;
-      border-radius:50%;
-      background:#004466;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      box-shadow:0 6px 18px rgba(0,0,0,.28);
-      z-index:999999;
-    ">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-        alt="WhatsApp"
-        style="width:34px;height:34px;filter:brightness(0) invert(1);display:block;">
+  <a href="https://wa.me/353857301768?text=Hi%20Vitalie%20Maintenance%2C%20I%27d%20like%20a%20quote%20for%20a%20job%20in%20Dublin.%20I%20can%20send%20photos%20and%20details."
+     target="_blank"
+     aria-label="Chat on WhatsApp"
+     class="whatsapp-float">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
   </a>
 
 </body>

@@ -12,9 +12,30 @@ function throttle(fn, wait=80){
 document.querySelectorAll('#year').forEach(el => el.textContent = new Date().getFullYear());
 
 // Mobile nav toggle
+const navLinks = document.getElementById("navLinks");
+
 function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("open");
+    navLinks?.classList.toggle("open");
 }
+
+document.querySelectorAll("#navLinks a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks?.classList.remove("open");
+  });
+});
+
+document.addEventListener("click", (event) => {
+  const navbar = document.querySelector(".navbar");
+  if (!navLinks?.classList.contains("open") || !navbar) return;
+  if (navbar.contains(event.target)) return;
+  navLinks.classList.remove("open");
+});
+
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    navLinks?.classList.remove("open");
+  }
+});
 
 
 // Scroll reveal
